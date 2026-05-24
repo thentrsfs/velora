@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const Nav = () => {
 	return (
-		<header className='fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-bg/80 border-b border-white/5'>
+		<header className='fixed top-0 left-0 w-full z-50 bg-transparent'>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
-				<h1 className='text-3xl uppercase font-clash-display tracking-widest'>
+				<h1 className='text-3xl uppercase font-clash-display tracking-widest select-none cursor-pointer'>
 					Velora
 				</h1>
 				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text-muted'>
