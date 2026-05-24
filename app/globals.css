@@ -20,3 +20,34 @@
 
 	--color-card: #18120f;
 }
+
+:root {
+
+  --font-clash-display: "Clash Display", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+
+  --color-bg: #0f0b08;
+  --color-surface: #1a1410;
+
+  --color-primary: #c08b5c;
+  --color-primary-light: #d9a679;
+
+  --color-secondary: #6b4f3b;
+
+  --color-text: #f5eee6;
+  --color-text-muted: #b8a999;
+
+  --color-border: #2a211b;
+
+  --color-card: #18120f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-satoshi);
+}
