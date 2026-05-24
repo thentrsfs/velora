@@ -7,7 +7,7 @@ const Nav = () => {
 				<h1 className='text-3xl uppercase font-clash-display tracking-widest select-none cursor-pointer'>
 					Velora
 				</h1>
-				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text-muted'>
+				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text/80'>
 					<li className='hover:text-text transition-colors duration-300'>
 						<Link href='/'>Home</Link>
 					</li>
