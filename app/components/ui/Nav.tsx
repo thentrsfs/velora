@@ -1,6 +1,22 @@
+'use client';
+
 import Link from 'next/link';
 
 const Nav = () => {
+	const handleScrollToSection = ({
+		e,
+		id,
+	}: {
+		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>;
+		id: string;
+	}) => {
+		e.preventDefault();
+		const section = document.getElementById(id);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+	};
+
 	return (
 		<header className='fixed top-0 left-0 w-full z-50 bg-transparent'>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
@@ -12,13 +28,25 @@ const Nav = () => {
 						<Link href='/'>Home</Link>
 					</li>
 					<li className='hover:text-text transition-colors duration-300'>
-						<Link href='/menu'>Menu</Link>
+						<Link
+							href='#menu'
+							onClick={(e) => handleScrollToSection({ e, id: 'menu' })}>
+							Menu
+						</Link>
 					</li>
 					<li className='hover:text-text transition-colors duration-300'>
-						<Link href='/about'>About</Link>
+						<Link
+							href='#about'
+							onClick={(e) => handleScrollToSection({ e, id: 'about' })}>
+							About
+						</Link>
 					</li>
 					<li className='hover:text-text transition-colors duration-300'>
-						<Link href='/contact'>Contact</Link>
+						<Link
+							href='#contact'
+							onClick={(e) => handleScrollToSection({ e, id: 'contact' })}>
+							Contact
+						</Link>
 					</li>
 				</ul>
 				<button className='rounded-full border border-primary py-2 px-5 text-sm lg:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'>

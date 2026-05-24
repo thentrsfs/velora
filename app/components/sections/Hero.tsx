@@ -1,6 +1,8 @@
 const Hero = () => {
 	return (
-		<section className='relative h-screen overflow-hidden'>
+		<section
+			id='hero'
+			className='relative h-screen overflow-hidden'>
 			<video
 				autoPlay
 				muted
