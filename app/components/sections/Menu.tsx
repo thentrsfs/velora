@@ -35,6 +35,7 @@ transition-all duration-500 ease-out'>
 								src='/images/black-coffee.jpg'
 								alt='Menu 1'
 								fill
+								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
@@ -61,6 +62,7 @@ transition-all duration-500 ease-out'>
 								src='/images/cappuccino-2.jpg'
 								alt='Menu 2'
 								fill
+								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
@@ -84,6 +86,7 @@ transition-all duration-500 ease-out'>
 								src='/images/esspresso-2.jpg'
 								alt='Menu 2'
 								fill
+								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw'
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
