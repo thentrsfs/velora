@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 
 const Nav = () => {
-	const [isScrolled, setIsScrolled] = useState(true);
+	const [isScrolled, setIsScrolled] = useState(false);
 
 	const handleScrollToSection = ({
 		e,
