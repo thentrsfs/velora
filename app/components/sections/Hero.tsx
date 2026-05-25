@@ -18,7 +18,7 @@ const Hero = () => {
 				/>
 			</video>
 			<div className='absolute inset-0 bg-bg/70' />
-
+			<div className='absolute bottom-0 left-0 h-20 w-full bg-linear-to-b from-transparent to-bg' />
 			<div className='relative z-10 flex h-full items-center'>
 				<div className='mx-auto w-full max-w-7xl px-6'>
 					<div className='max-w-140'>
