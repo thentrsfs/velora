@@ -1,10 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 
 const Nav = () => {
+	const [isScrolled, setIsScrolled] = useState(true);
+
 	const handleScrollToSection = ({
 		e,
 		id,
@@ -19,10 +22,31 @@ const Nav = () => {
 		}
 	};
 
+	const handleScrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	};
+
+	useEffect(() => {
+		const handleScroll = () => {
+			if (window.scrollY > 50) {
+				setIsScrolled(true);
+			} else {
+				setIsScrolled(false);
+			}
+		};
+		window.addEventListener('scroll', handleScroll);
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	});
+
 	return (
-		<header className='fixed top-0 left-0 w-full z-50 bg-transparent'>
+		<header
+			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled ? 'bg-bg/80 backdrop-blur-xl border-b border-white/5' : ''}`}>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
-				<h1 className='text-3xl uppercase font-clash-display tracking-widest select-none cursor-pointer'>
+				<h1
+					onClick={() => handleScrollToTop()}
+					className='text-3xl uppercase font-clash-display tracking-widest select-none cursor-pointer'>
 					Velora
 				</h1>
 				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text/80'>
