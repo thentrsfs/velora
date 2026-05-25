@@ -4,14 +4,14 @@ import SecondaryBtn from '@/app/components/ui/SecondaryBtn';
 
 const Menu = () => {
 	return (
-		<section className='relative h-dvh py-32 flex items-center'>
-			<div className='mx-auto w-full max-w-7xl px-6 grid grid-cols-2 items-center'>
-				<div className='max-w-lg'>
+		<section className='relative lg:h-dvh h-full lg:py-32 py-20 flex items-center'>
+			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 max-md:gap-10 items-center'>
+				<div className='lg:max-w-lg max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>
 						Signature Menu
 					</p>
 
-					<h2 className='font-display text-6xl leading-none text-text'>
+					<h2 className='font-display lg:text-6xl text-4xl leading-none text-text'>
 						Crafted With
 						<br />
 						Precision & Warmth
@@ -39,13 +39,13 @@ transition-all duration-500 ease-out'>
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
-						<div className='p-6 flex items-center justify-between'>
+						<div className='lg:p-6 p-4 flex items-center justify-between'>
 							<div>
 								<h3 className='text-xl text-text font-clash-display tracking-wide'>
 									Midnight Roast
 								</h3>
 
-								<p className='mt-2 text-sm text-text-muted'>
+								<p className='mt-2 text-sm text-text-muted max-md:max-w-40'>
 									Rich dark roast with deep chocolate notes.
 								</p>
 							</div>
@@ -66,8 +66,8 @@ transition-all duration-500 ease-out'>
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
-						<div className='p-6 '>
-							<div className='flex items-center justify-between'>
+						<div className='lg:p-6 p-4 '>
+							<div className='flex max-md:flex-col max-md:gap-2 items-center justify-between'>
 								<h3 className='text-xl text-text font-clash-display tracking-wide'>
 									Velvet Latte
 								</h3>
@@ -90,8 +90,8 @@ transition-all duration-500 ease-out'>
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
 						</div>
-						<div className='p-6 '>
-							<div className='flex items-center justify-between'>
+						<div className='lg:p-6 p-4 '>
+							<div className='flex max-md:flex-col max-md:gap-2 items-center justify-between'>
 								<h3 className='text-xl text-text font-clash-display tracking-wide'>
 									Espresso Noir
 								</h3>
