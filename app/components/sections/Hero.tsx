@@ -1,3 +1,6 @@
+import PrimaryBtn from '@/app/components/ui/PrimaryBtn';
+import SecondaryBtn from '@/app/components/ui/SecondaryBtn';
+
 const Hero = () => {
 	return (
 		<section
@@ -18,12 +21,12 @@ const Hero = () => {
 
 			<div className='relative z-10 flex h-full items-center'>
 				<div className='mx-auto w-full max-w-7xl px-6'>
-					<div className='max-w-150'>
+					<div className='max-w-140'>
 						<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>
 							Velora Café
 						</p>
 
-						<h1 className='font-clash-display text-7xl tracking-[0.01em] text-text'>
+						<h1 className='font-clash-display text-7xl tracking-[0.02em] text-text'>
 							Crafted Moments,
 							<br />
 							Poured Daily.
@@ -35,12 +38,8 @@ const Hero = () => {
 						</p>
 
 						<div className='mt-10 flex gap-4'>
-							<button className='rounded-full border border-primary text-text py-2 px-5 text-sm lg:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'>
-								Reserve table
-							</button>
-							<button className='text-text/80 hover:text-text transition-colors duration-300 cursor-pointer'>
-								Explore Menu →
-							</button>
+							<PrimaryBtn />
+							<SecondaryBtn>Explore Menu →</SecondaryBtn>
 						</div>
 					</div>
 				</div>

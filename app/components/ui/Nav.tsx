@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import PrimaryButton from '@/app/components/ui/PrimaryBtn';
+
 const Nav = () => {
 	const handleScrollToSection = ({
 		e,
@@ -49,9 +51,7 @@ const Nav = () => {
 						</Link>
 					</li>
 				</ul>
-				<button className='rounded-full border border-primary py-2 px-5 text-sm lg:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'>
-					Reserve table
-				</button>
+				<PrimaryButton />
 			</nav>
 		</header>
 	);
