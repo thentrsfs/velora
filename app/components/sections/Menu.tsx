@@ -4,7 +4,9 @@ import SecondaryBtn from '@/app/components/ui/SecondaryBtn';
 
 const Menu = () => {
 	return (
-		<section className='relative lg:h-dvh h-full lg:py-32 py-20 flex items-center'>
+		<section
+			id='menu'
+			className='relative lg:h-dvh h-full lg:py-32 py-20 flex items-center'>
 			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 max-md:gap-10 items-center'>
 				<div className='lg:max-w-lg max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>

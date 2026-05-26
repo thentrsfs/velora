@@ -2,7 +2,9 @@ import Image from 'next/image';
 
 const About = () => {
 	return (
-		<section className='lg:h-dvh h-full grid lg:grid-cols-2 items-center px-6 lg:max-w-7xl mx-auto relative max-md:gap-10 lg:py-32 py-20'>
+		<section
+			id='about'
+			className='lg:h-dvh h-full grid lg:grid-cols-2 items-center px-6 lg:max-w-7xl mx-auto relative max-md:gap-10 lg:py-32 py-20'>
 			<div className='relative lg:h-160 h-90 overflow-hidden group rounded-4xl'>
 				<Image
 					src='/images/about-image-1.jpg'
