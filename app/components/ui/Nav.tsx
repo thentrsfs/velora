@@ -51,7 +51,11 @@ const Nav = () => {
 				</h1>
 				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text/80'>
 					<li className='hover:text-text transition-colors duration-300'>
-						<Link href='/'>Home</Link>
+						<Link
+							href='/'
+							onClick={() => handleScrollToTop()}>
+							Home
+						</Link>
 					</li>
 					<li className='hover:text-text transition-colors duration-300'>
 						<Link
