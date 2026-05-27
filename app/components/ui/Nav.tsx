@@ -53,29 +53,29 @@ const Nav = () => {
 					className='text-3xl uppercase font-clash-display tracking-widest select-none cursor-pointer'>
 					Velora
 				</h1>
-				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text/80'>
-					<li className='hover:text-text transition-colors duration-300'>
+				<ul className='hidden lg:flex gap-10 items-center lg:text-base text-sm text-text'>
+					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
 							href='/'
 							onClick={() => handleScrollToTop()}>
 							Home
 						</Link>
 					</li>
-					<li className='hover:text-text transition-colors duration-300'>
+					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
 							href='#menu'
 							onClick={(e) => handleScrollToSection({ e, id: 'menu' })}>
 							Menu
 						</Link>
 					</li>
-					<li className='hover:text-text transition-colors duration-300'>
+					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
 							href='#about'
 							onClick={(e) => handleScrollToSection({ e, id: 'about' })}>
 							About
 						</Link>
 					</li>
-					<li className='hover:text-text transition-colors duration-300'>
+					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
 							href='#contact'
 							onClick={(e) => handleScrollToSection({ e, id: 'contact' })}>
