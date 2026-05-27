@@ -5,8 +5,8 @@ const Contact = () => {
 	return (
 		<section
 			id='contact'
-			className='lg:h-dvh h-full px-6 lg:max-w-7xl mx-auto relative lg:py-32 py-20 flex items-center'>
-			<div className='grid lg:grid-cols-2 items-center max-md:gap-10 w-full'>
+			className='min-h-screen px-6 relative lg:py-32 pt-20 pb-60 flex items-center'>
+			<div className='grid lg:grid-cols-2 items-center max-md:gap-10 w-full lg:max-w-7xl mx-auto '>
 				<div className='lg:max-w-lg max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>
 						Get in touch
