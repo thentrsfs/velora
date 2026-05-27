@@ -17,7 +17,7 @@ const About = () => {
 				<div className='absolute inset-0 bg-bg/20' />
 			</div>
 
-			<div className='lg:max-w-lg max-w-xs mx-auto'>
+			<div className='lg:max-w-lg max-w-xs lg:mx-auto'>
 				<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>
 					ABOUT VELORA
 				</p>
