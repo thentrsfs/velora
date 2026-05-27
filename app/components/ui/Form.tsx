@@ -30,7 +30,7 @@ const Form = () => {
 			<div>
 				<label
 					htmlFor='name'
-					className='text-sm uppercase tracking-[0.25em] text-white/40'>
+					className='text-sm uppercase tracking-[0.25em] text-text/80'>
 					Name
 				</label>
 
@@ -48,7 +48,7 @@ const Form = () => {
 			<div>
 				<label
 					htmlFor='email'
-					className='text-sm uppercase tracking-[0.25em] text-white/40'>
+					className='text-sm uppercase tracking-[0.25em] text-text/80'>
 					Email
 				</label>
 
@@ -66,7 +66,7 @@ const Form = () => {
 			<div>
 				<label
 					htmlFor='message'
-					className='text-sm uppercase tracking-[0.25em] text-white/40'>
+					className='text-sm uppercase tracking-[0.25em] text-text/80'>
 					Message
 				</label>
 
@@ -83,7 +83,7 @@ const Form = () => {
 
 			<button
 				type='submit'
-				className='group inline-flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-text-muted transition-colors duration-300 hover:text-primary cursor-pointer'>
+				className='group inline-flex items-center gap-2 text-sm uppercase tracking-[0.25em] text-text/80 transition-colors duration-300 hover:text-primary cursor-pointer'>
 				Send Message
 				<span className='transition-transform duration-300 group-hover:translate-x-1'>
 					→
