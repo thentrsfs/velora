@@ -2,11 +2,15 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { Menu } from 'lucide-react';
+import { useUiStore } from '@/app/store/ui';
 
 import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 
 const Nav = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
+
+	const setIsNavOpen = useUiStore((state) => state.setIsNavOpen);
 
 	const handleScrollToSection = ({
 		e,
@@ -79,7 +83,12 @@ const Nav = () => {
 						</Link>
 					</li>
 				</ul>
-				<PrimaryButton />
+				<div className='hidden lg:block'>
+					<PrimaryButton />
+				</div>
+				<div className='lg:hidden'>
+					<Menu onClick={() => setIsNavOpen(true)} />
+				</div>
 			</nav>
 		</header>
 	);

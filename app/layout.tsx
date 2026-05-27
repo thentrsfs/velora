@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import './globals.css';
 
 import Nav from '@/app/components/ui/Nav';
+import NavMobile from '@/app/components/ui/NavMobile';
 
 const clashDisplay = localFont({
 	src: '../public/fonts/ClashDisplay-Variable.woff2',
@@ -32,6 +33,7 @@ export default function RootLayout({
 			className={`${clashDisplay.variable} ${satoshi.variable} h-full antialiased`}>
 			<body className='min-h-full flex flex-col'>
 				<Nav />
+				<NavMobile />
 				{children}
 			</body>
 		</html>
