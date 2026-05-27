@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 
+import { Toaster } from 'sonner';
 import Nav from '@/app/components/ui/Nav';
 import NavMobile from '@/app/components/ui/NavMobile';
 
@@ -35,6 +36,17 @@ export default function RootLayout({
 				<Nav />
 				<NavMobile />
 				{children}
+				<Toaster
+					position='top-center'
+					theme='dark'
+					toastOptions={{
+						style: {
+							background: '#1a1410',
+							border: '1px solid rgba(255,255,255,0.08)',
+							color: '#fff',
+						},
+					}}
+				/>
 			</body>
 		</html>
 	);

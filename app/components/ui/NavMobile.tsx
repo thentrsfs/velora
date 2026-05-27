@@ -30,7 +30,7 @@ const NavMobile = () => {
 
 	return (
 		<div
-			className={`fixed inset-0 z-50 flex items-center justify-center bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100' : 'opacity-0'}`}>
+			className={`fixed inset-0 flex items-center justify-center bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100 z-50' : 'opacity-0'}`}>
 			<button
 				className='absolute top-6 right-6  text-sm lg:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'
 				onClick={() => setIsNavOpen(!isNavOpen)}>
