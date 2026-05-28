@@ -70,7 +70,7 @@ transition-all duration-500 ease-out'>
 						</div>
 						<div className='lg:p-6 p-4 '>
 							<div className='flex max-md:flex-col max-md:gap-2 items-center justify-between'>
-								<h3 className='text-xl text-text font-clash-display tracking-wide'>
+								<h3 className='lg:text-xl text-text font-clash-display tracking-wide'>
 									Velvet Latte
 								</h3>
 								<p className=' text-primary text-sm tracking-wide'>€ 6.99</p>
@@ -94,7 +94,7 @@ transition-all duration-500 ease-out'>
 						</div>
 						<div className='lg:p-6 p-4 '>
 							<div className='flex max-md:flex-col max-md:gap-2 items-center justify-between'>
-								<h3 className='text-xl text-text font-clash-display tracking-wide'>
+								<h3 className='lg:text-xl text-text font-clash-display tracking-wide'>
 									Espresso Noir
 								</h3>
 								<p className=' text-primary text-sm tracking-wide'>€ 4.99</p>
