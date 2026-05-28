@@ -11,6 +11,7 @@ const Hero = () => {
 				muted
 				loop
 				playsInline
+				poster='/images/velora-poster.png'
 				className='absolute inset-0 w-full h-full object-cover '>
 				<source
 					src='/videos/hero-video.mp4'
