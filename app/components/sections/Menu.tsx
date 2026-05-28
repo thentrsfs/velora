@@ -37,6 +37,7 @@ transition-all duration-500 ease-out'>
 								src='/images/black-coffee.jpg'
 								alt='Menu 1'
 								fill
+								loading='eager'
 								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 								className='object-cover transition-transform duration-700 group-hover:scale-105 ease-out'
 							/>
