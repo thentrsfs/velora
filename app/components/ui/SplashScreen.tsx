@@ -48,7 +48,8 @@ const SplashScreen = () => {
 	translate-y-full
 	opacity-0
 	font-clash-display
-	text-6xl
+	lg:text-6xl
+    text-4xl
 	uppercase
 	tracking-[0.2em]
 	text-text'>
