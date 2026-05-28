@@ -32,7 +32,7 @@ const Menu = () => {
 				.to(
 					'.menu-text',
 					{ opacity: 1, y: 0, duration: 1, ease: 'power4.out' },
-					'-=0.4',
+					'-=0.8',
 				)
 				.fromTo(
 					'.menu-card',
@@ -44,7 +44,7 @@ const Menu = () => {
 						ease: 'power3.out',
 						stagger: 0.2,
 					},
-					'-=1.5',
+					'-=1',
 				);
 		},
 		{ scope: menuRef },

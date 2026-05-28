@@ -41,7 +41,7 @@ const About = () => {
 				.to(
 					'.about-text',
 					{ opacity: 1, y: 0, duration: 1, ease: 'power4.out' },
-					'-=0.4',
+					'-=0.8',
 				);
 		},
 		{ scope: aboutRef },
