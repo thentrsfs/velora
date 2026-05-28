@@ -19,7 +19,7 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
-	title: 'Velora',
+	title: 'Velora | Cafe & Coffee Shop',
 	description: 'Coffee Shop',
 };
 
