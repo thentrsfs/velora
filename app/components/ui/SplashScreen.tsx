@@ -31,6 +31,7 @@ const SplashScreen = () => {
 					yPercent: -100,
 					duration: 1.3,
 					ease: 'power4.inOut',
+					onComplete: () => setSplashScreen(false),
 				},
 				'-=0.4',
 			);
