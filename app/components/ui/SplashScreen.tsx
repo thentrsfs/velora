@@ -25,13 +25,17 @@ const SplashScreen = () => {
 				opacity: 1,
 				duration: 1.2,
 				ease: 'power4.out',
+				onComplete: () => {
+					setTimeout(() => {
+						setSplashScreen(false);
+					}, 400);
+				},
 			}).to(
 				splashRef.current,
 				{
 					yPercent: -100,
 					duration: 1.3,
 					ease: 'power4.inOut',
-					onComplete: () => setSplashScreen(false),
 				},
 				'-=0.4',
 			);
