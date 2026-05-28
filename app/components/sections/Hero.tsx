@@ -17,12 +17,16 @@ const Hero = () => {
 
 		const tl = gsap.timeline();
 
-		tl.to('.hero-label', {
-			opacity: 1,
-			y: 0,
-			duration: 0.8,
-			ease: 'power3.out',
-		})
+		tl.to(
+			'.hero-label',
+			{
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+			},
+			'-=0.2',
+		)
 			.to(
 				'.hero-title',
 				{

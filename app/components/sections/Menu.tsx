@@ -1,36 +1,85 @@
+'use client';
+
 import Image from 'next/image';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useRef } from 'react';
 
 import SecondaryBtn from '@/app/components/ui/SecondaryBtn';
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Menu = () => {
+	const menuRef = useRef<HTMLDivElement>(null);
+
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: { trigger: menuRef.current, start: 'top center' },
+			});
+
+			tl.to('.menu-label', {
+				opacity: 1,
+				y: 0,
+				duration: 0.8,
+				ease: 'power3.out',
+			})
+				.to(
+					'.menu-title',
+					{ opacity: 1, y: 0, duration: 1.2, ease: 'power4.out' },
+					'-=0.4',
+				)
+				.to(
+					'.menu-text',
+					{ opacity: 1, y: 0, duration: 1, ease: 'power4.out' },
+					'-=0.4',
+				)
+				.fromTo(
+					'.menu-card',
+					{ opacity: 0, y: 40 },
+					{
+						opacity: 1,
+						y: 0,
+						duration: 1,
+						ease: 'power3.out',
+						stagger: 0.2,
+					},
+					'-=1.5',
+				);
+		},
+		{ scope: menuRef },
+	);
+
 	return (
 		<section
 			id='menu'
+			ref={menuRef}
 			className='relative lg:h-dvh h-full lg:py-32 py-20 flex items-center'>
 			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 max-md:gap-10 items-center'>
 				<div className='lg:max-w-lg max-w-xs'>
-					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase'>
+					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase menu-label opacity-0 translate-y-10'>
 						Signature Menu
 					</p>
 
-					<h2 className='font-display lg:text-6xl text-4xl leading-none text-text'>
+					<h2 className='font-display lg:text-6xl text-4xl leading-none text-text menu-title opacity-0 translate-y-10'>
 						Crafted With
 						<br />
 						Precision & Warmth
 					</h2>
-
-					<p className='mt-8 max-w-sm text-lg text-text-muted'>
-						Every drink at Velora is prepared with carefully selected beans and
-						intentional technique.
-					</p>
-					<div className='mt-8'>
-						<SecondaryBtn>View Full Menu →</SecondaryBtn>
+					<div className='menu-text opacity-0 translate-y-10'>
+						<p className='mt-8 max-w-sm text-lg text-text-muted'>
+							Every drink at Velora is prepared with carefully selected beans
+							and intentional technique.
+						</p>
+						<div className='mt-8'>
+							<SecondaryBtn>View Full Menu →</SecondaryBtn>
+						</div>
 					</div>
 				</div>
 
 				<div className='grid grid-cols-2 gap-5'>
 					<div
-						className='col-span-2 group overflow-hidden rounded-4xl border border-white/5 bg-white/3 backdrop-blur-xl hover:-translate-y-1
+						className='col-span-2 menu-card opacity-0 group overflow-hidden rounded-4xl border border-white/5 bg-white/3 backdrop-blur-xl
 transition-all duration-500 ease-out'>
 						<div className='relative h-75 overflow-hidden'>
 							<Image
@@ -58,7 +107,7 @@ transition-all duration-500 ease-out'>
 					</div>
 
 					<div
-						className='group overflow-hidden rounded-3xl border border-white/5 bg-white/3 backdrop-blur-xl hover:-translate-y-1
+						className='group menu-card opacity-0 overflow-hidden rounded-3xl border border-white/5 bg-white/3 backdrop-blur-xl
 transition-all duration-500 ease-out'>
 						<div className='relative h-50 overflow-hidden '>
 							<Image
@@ -82,7 +131,7 @@ transition-all duration-500 ease-out'>
 						</div>
 					</div>
 					<div
-						className='group overflow-hidden rounded-3xl border border-white/5 bg-white/3 backdrop-blur-xl hover:-translate-y-1
+						className='group menu-card opacity-0 overflow-hidden rounded-3xl border border-white/5 bg-white/3 backdrop-blur-xl
 transition-all duration-500 ease-out'>
 						<div className='relative h-50 overflow-hidden '>
 							<Image
