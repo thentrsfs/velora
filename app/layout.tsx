@@ -5,6 +5,7 @@ import './globals.css';
 import { Toaster } from 'sonner';
 import Nav from '@/app/components/ui/Nav';
 import NavMobile from '@/app/components/ui/NavMobile';
+import ScrollToTop from '@/app/components/system/ScrollToTop';
 
 const clashDisplay = localFont({
 	src: '../public/fonts/ClashDisplay-Variable.woff2',
@@ -36,6 +37,7 @@ export default function RootLayout({
 				<Nav />
 				<NavMobile />
 				{children}
+				<ScrollToTop />
 				<Toaster
 					position='top-center'
 					theme='dark'
