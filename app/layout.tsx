@@ -32,7 +32,8 @@ export default function RootLayout({
 	return (
 		<html
 			lang='en'
-			className={`${clashDisplay.variable} ${satoshi.variable} h-full antialiased`}>
+			className={`${clashDisplay.variable} ${satoshi.variable} h-full antialiased`}
+			data-scroll-behavior='smooth'>
 			<body className='min-h-full flex flex-col'>
 				<Nav />
 				<NavMobile />
