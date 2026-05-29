@@ -72,7 +72,7 @@ const Menu = () => {
 							and intentional technique.
 						</p>
 						<div className='mt-8'>
-							<SecondaryBtn>View Full Menu →</SecondaryBtn>
+							<SecondaryBtn>View Full Menu</SecondaryBtn>
 						</div>
 					</div>
 				</div>
