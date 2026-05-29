@@ -9,6 +9,7 @@ import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 
 const Nav = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
+	const [isNavVisible, setIsNavVisible] = useState(true);
 
 	const setIsNavOpen = useUiStore((state) => state.setIsNavOpen);
 
@@ -31,22 +32,36 @@ const Nav = () => {
 	};
 
 	useEffect(() => {
+		let lastScrollY = window.scrollY;
+
 		const handleScroll = () => {
-			if (window.scrollY > 50) {
-				setIsScrolled(true);
-			} else {
-				setIsScrolled(false);
+			const currentScrollY = window.scrollY;
+
+			setIsScrolled(currentScrollY > 50);
+
+			if (window.innerWidth <= 1024) {
+				if (currentScrollY < 50) {
+					setIsNavVisible(true);
+				} else if (currentScrollY > lastScrollY) {
+					setIsNavVisible(false);
+				} else {
+					setIsNavVisible(true);
+				}
 			}
+
+			lastScrollY = currentScrollY;
 		};
-		window.addEventListener('scroll', handleScroll);
+
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
-	}, [isScrolled]);
+	}, []);
 
 	return (
 		<header
-			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled ? 'bg-bg/80 backdrop-blur-xl border-b border-white/5' : ''}`}>
+			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled && 'bg-bg/80 backdrop-blur-xl border-b border-white/5'} ${!isNavVisible && '-translate-y-full'}`}>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
 				<h1
 					onClick={() => handleScrollToTop()}
