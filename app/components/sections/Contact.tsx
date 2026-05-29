@@ -60,8 +60,8 @@ const Contact = () => {
 		<section
 			id='contact'
 			ref={contactRef}
-			className='min-h-screen px-6 relative lg:py-32 pt-20 pb-60 flex items-center'>
-			<div className='grid lg:grid-cols-2 items-center max-md:gap-10 w-full lg:max-w-7xl mx-auto '>
+			className='min-h-screen relative lg:py-32 pt-20 pb-60 flex items-center'>
+			<div className='grid lg:grid-cols-2 items-center max-md:gap-10 w-full lg:max-w-7xl mx-auto px-6'>
 				<div className='lg:max-w-lg max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase contact-label opacity-0 translate-y-10'>
 						Get in touch

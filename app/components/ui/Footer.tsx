@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
 		<footer className='absolute bottom-0 left-0 w-full text-sm text-text-muted border-t border-white/10'>
-			<div className='flex max-sm:flex-col max-sm:gap-8 items-center justify-between py-6 max-w-7xl mx-auto'>
+			<div className='flex max-sm:flex-col max-sm:gap-8 items-center justify-between p-6 max-w-7xl mx-auto'>
 				<p className='text-sm text-text-muted'>
 					&copy; {new Date().getFullYear()} Velora. All rights reserved.
 				</p>
