@@ -7,7 +7,6 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
 
-import PrimaryBtn from '@/app/components/ui/PrimaryBtn';
 import SecondaryBtn from '@/app/components/ui/SecondaryBtn';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -62,7 +61,7 @@ const MenuPage = () => {
 							</p>
 
 							<div className='mt-10 flex gap-4'>
-								<PrimaryBtn />
+								<SecondaryBtn href='#coffee'> Explore Coffee</SecondaryBtn>
 							</div>
 						</div>
 					</div>
