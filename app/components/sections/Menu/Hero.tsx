@@ -41,7 +41,7 @@ const Hero = () => {
 		<section
 			ref={menuRef}
 			className='relative z-10 flex items-center lg:h-dvh h-full overflow-hidden'>
-			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center'>
+			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center pt-25'>
 				<div className='lg:max-w-150 '>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase hero-label opacity-0 translate-y-10'>
 						Our Menu
@@ -63,7 +63,7 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				<div className='relative lg:h-175 w-full rounded-4xl overflow-hidden ml-auto'>
+				<div className='relative lg:h-175 h-80 w-full rounded-4xl overflow-hidden ml-auto'>
 					<Image
 						src='/images/menu.jpg'
 						alt='menu'
@@ -74,7 +74,7 @@ const Hero = () => {
 					/>
 					<div className='absolute bottom-0 left-0 rounded-bl-4xl rounded-tr-3xl bg-bg/70 backdrop-blur-md px-5 py-4 border-t border-r border-white/10'>
 						<p className='text-sm text-text/80'>✦ Signature Drinks</p>
-						<p className='mt-1 text-xl text-text font-medium'>
+						<p className='mt-1 lg:text-xl text-base text-text font-medium'>
 							12+ Crafted Selections
 						</p>
 					</div>
