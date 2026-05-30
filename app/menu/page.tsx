@@ -74,7 +74,7 @@ const MenuPage = () => {
 							sizes='(max-width: 768px) 100vw, 50vw'
 							loading='eager'
 						/>
-						<div className='absolute bottom-0 left-0 rounded-bl-4xl rounded-tr-3xl bg-black/60 backdrop-blur-md px-5 py-4 border-t border-r border-white/10'>
+						<div className='absolute bottom-0 left-0 rounded-bl-4xl rounded-tr-3xl bg-bg/70 backdrop-blur-md px-5 py-4 border-t border-r border-white/10'>
 							<p className='text-sm text-text/80'>✦ Signature Drinks</p>
 							<p className='mt-1 text-xl text-text font-medium'>
 								12+ Crafted Selections
