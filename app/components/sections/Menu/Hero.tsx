@@ -40,7 +40,7 @@ const Hero = () => {
 	return (
 		<section
 			ref={menuRef}
-			className='relative z-10 flex items-center h-full'>
+			className='relative z-10 flex items-center lg:h-dvh h-full overflow-hidden'>
 			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center'>
 				<div className='lg:max-w-150 '>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase hero-label opacity-0 translate-y-10'>
@@ -59,7 +59,7 @@ const Hero = () => {
 						</p>
 
 						<div className='mt-10 flex gap-4'>
-							<SecondaryBtn href='#coffee'> Explore Coffee</SecondaryBtn>
+							<SecondaryBtn href='#full-menu'>See the Menu</SecondaryBtn>
 						</div>
 					</div>
 				</div>
