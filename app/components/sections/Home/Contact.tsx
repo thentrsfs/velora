@@ -6,7 +6,6 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import Form from '@/app/components/ui/Form';
-import Footer from '@/app/components/ui/Footer';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Contact = () => {
@@ -100,7 +99,6 @@ const Contact = () => {
 					<Form />
 				</div>
 			</div>
-			<Footer />
 		</section>
 	);
 };

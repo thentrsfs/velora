@@ -6,6 +6,7 @@ import { Toaster } from 'sonner';
 import Nav from '@/app/components/ui/Nav';
 import NavMobile from '@/app/components/ui/NavMobile';
 import ScrollToTop from '@/app/components/system/ScrollToTop';
+import Footer from './components/ui/Footer';
 
 const clashDisplay = localFont({
 	src: '../public/fonts/ClashDisplay-Variable.woff2',
@@ -34,7 +35,7 @@ export default function RootLayout({
 			lang='en'
 			className={`${clashDisplay.variable} ${satoshi.variable} h-full antialiased`}
 			data-scroll-behavior='smooth'>
-			<body className='min-h-full flex flex-col'>
+			<body className='min-h-full flex flex-col relative'>
 				<Nav />
 				<NavMobile />
 				{children}
@@ -50,6 +51,8 @@ export default function RootLayout({
 						},
 					}}
 				/>
+
+				<Footer />
 			</body>
 		</html>
 	);
