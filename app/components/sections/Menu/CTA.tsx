@@ -40,9 +40,9 @@ const CTA = () => {
 		<section
 			id='cta'
 			ref={ctaRef}
-			className='lg:pb-34 lg:pt-20 flex items-center w-full border-t border-white/10'>
-			<div className='lg:max-w-7xl px-6 mx-auto w-full grid lg:grid-cols-2 items-center'>
-				<div className='lg:max-w-sm'>
+			className='lg:pb-34 pb-60 pt-20 flex items-center w-full border-t border-white/10'>
+			<div className='lg:max-w-7xl px-6 mx-auto w-full grid md:grid-cols-2 max-md:gap-16 items-center'>
+				<div className='lg:max-w-sm max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase cta-label opacity-0 translate-y-10'>
 						Visit Velora
 					</p>
@@ -62,9 +62,9 @@ const CTA = () => {
 					</div>
 				</div>
 
-				<div className='flex items-center justify-end'>
+				<div className='hidden md:flex items-center justify-center lg:justify-end '>
 					<div className='max-w-lg cta-text opacity-0 translate-y-10'>
-						<p className='font-clash-display text-4xl xl:text-[52px] leading-[1.05] text-text'>
+						<p className='font-clash-display text-4xl lg:text-[52px] leading-[1.05] text-text'>
 							&quot;Every cup <br /> tells a story.&quot;
 						</p>
 
