@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { Menu } from 'lucide-react';
 import { useUiStore } from '@/app/store/ui';
@@ -8,6 +9,7 @@ import { useUiStore } from '@/app/store/ui';
 import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 
 const Nav = () => {
+	const pathname = usePathname();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isNavVisible, setIsNavVisible] = useState(true);
 
@@ -81,15 +83,24 @@ const Nav = () => {
 					</li>
 					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
-							href='#about'
-							onClick={(e) => handleScrollToSection({ e, id: 'about' })}>
+							href='/#about'
+							onClick={
+								pathname === '/menu'
+									? () => {}
+									: (e) => handleScrollToSection({ e, id: 'about' })
+							}>
 							About
 						</Link>
 					</li>
 					<li className='hover:text-primary transition-colors duration-300'>
 						<Link
-							href='#contact'
-							onClick={(e) => handleScrollToSection({ e, id: 'contact' })}>
+							href={pathname === '/' ? '#contact' : '#cta'}
+							onClick={(e) =>
+								handleScrollToSection({
+									e,
+									id: pathname === '/' ? 'contact' : 'cta',
+								})
+							}>
 							Contact
 						</Link>
 					</li>
