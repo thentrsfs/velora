@@ -33,6 +33,16 @@ const Hero = () => {
 					'.hero-text',
 					{ opacity: 1, y: 0, duration: 1, ease: 'power4.out' },
 					'-=0.8',
+				)
+				.to(
+					'.hero-image',
+					{
+						opacity: 1,
+						y: 0,
+						duration: 1,
+						ease: 'power4.out',
+					},
+					'-=0.8',
 				);
 		},
 		{ scope: menuRef },
@@ -63,7 +73,7 @@ const Hero = () => {
 						</div>
 					</div>
 				</div>
-				<div className='relative lg:h-175 h-80 w-full rounded-4xl overflow-hidden ml-auto'>
+				<div className='relative lg:h-175 h-80 w-full rounded-4xl overflow-hidden ml-auto hero-image opacity-0 translate-y-10'>
 					<Image
 						src='/images/menu.jpg'
 						alt='menu'
