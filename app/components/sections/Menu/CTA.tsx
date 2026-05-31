@@ -62,7 +62,7 @@ const CTA = () => {
 				</div>
 
 				<div className='flex items-center justify-end'>
-					<div className='max-w-lg'>
+					<div className='max-w-lg cta-text opacity-0 translate-y-10'>
 						<p className='font-clash-display text-4xl xl:text-[52px] leading-[1.05] text-text'>
 							&quot;Every cup <br /> tells a story.&quot;
 						</p>
