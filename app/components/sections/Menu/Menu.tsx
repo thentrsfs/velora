@@ -7,6 +7,7 @@ import { useRef } from 'react';
 
 import { menuCategories } from '@/app/data/menu';
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Menu = () => {
 	const menuRef = useRef<HTMLDivElement>(null);
 
@@ -19,7 +20,7 @@ const Menu = () => {
 					const items = category.querySelectorAll('.menu-item');
 
 					const tl = gsap.timeline({
-						scrollTrigger: { trigger: category, start: 'top 70%' },
+						scrollTrigger: { trigger: category, start: 'top 85%' },
 					});
 
 					tl.to(title, {
