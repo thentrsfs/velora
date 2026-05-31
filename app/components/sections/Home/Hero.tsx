@@ -75,13 +75,13 @@ const Hero = () => {
 							Velora Café
 						</p>
 
-						<h1 className='font-clash-display lg:text-7xl text-[40px] leading-none tracking-[0.02em] text-text hero-title opacity-0 translate-y-10'>
+						<h1 className='font-clash-display lg:text-7xl md:text-5xl text-[40px] leading-none tracking-[0.02em] text-text hero-title opacity-0 translate-y-10'>
 							Crafted Moments,
 							<br />
 							Poured Daily.
 						</h1>
 						<div className='hero-text opacity-0 translate-y-10'>
-							<p className='mt-6 lg:max-w-md max-w-2xs text-lg text-text-muted '>
+							<p className='mt-6 lg:max-w-md md:max-w-sm max-w-2xs text-lg text-text-muted '>
 								Experience specialty coffee and a warm, intentional atmosphere
 								in every cup.
 							</p>
