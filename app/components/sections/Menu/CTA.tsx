@@ -38,6 +38,7 @@ const CTA = () => {
 	);
 	return (
 		<section
+			id='cta'
 			ref={ctaRef}
 			className='lg:pb-34 lg:pt-20 flex items-center w-full border-t border-white/10'>
 			<div className='lg:max-w-7xl px-6 mx-auto w-full grid lg:grid-cols-2 items-center'>

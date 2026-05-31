@@ -77,11 +77,7 @@ const Nav = () => {
 						</Link>
 					</li>
 					<li className='hover:text-primary transition-colors duration-300'>
-						<Link
-							href='#menu'
-							onClick={(e) => handleScrollToSection({ e, id: 'menu' })}>
-							Menu
-						</Link>
+						<Link href='/menu'>Menu</Link>
 					</li>
 					<li className='hover:text-primary transition-colors duration-300'>
 						<Link

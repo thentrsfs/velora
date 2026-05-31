@@ -3,12 +3,35 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
 
 import { useUiStore } from '@/app/store/ui';
 
 const NavMobile = () => {
+	const pathname = usePathname();
+
 	const isNavOpen = useUiStore((state) => state.isNavOpen);
 	const setIsNavOpen = useUiStore((state) => state.setIsNavOpen);
+
+	const handleScrollToSection = ({
+		e,
+		id,
+	}: {
+		e: React.MouseEvent<HTMLAnchorElement, MouseEvent>;
+		id: string;
+	}) => {
+		e.preventDefault();
+		const section = document.getElementById(id);
+		if (section) {
+			section.scrollIntoView({ behavior: 'smooth' });
+		}
+		setIsNavOpen(false);
+	};
+
+	const handleScrollToTop = () => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+		setIsNavOpen(false);
+	};
 
 	useEffect(() => {
 		if (isNavOpen) {
@@ -41,13 +64,13 @@ const NavMobile = () => {
 				<li>
 					<Link
 						href='/'
-						onClick={closeNav}>
+						onClick={handleScrollToTop}>
 						Home
 					</Link>
 				</li>
 				<li>
 					<Link
-						href='#menu'
+						href='/menu'
 						onClick={closeNav}>
 						Menu
 					</Link>
@@ -55,14 +78,19 @@ const NavMobile = () => {
 				<li>
 					<Link
 						href='#about'
-						onClick={closeNav}>
+						onClick={(e) => handleScrollToSection({ e, id: 'about' })}>
 						About
 					</Link>
 				</li>
 				<li>
 					<Link
-						href='#contact'
-						onClick={closeNav}>
+						href={pathname === '/' ? '#contact' : '#cta'}
+						onClick={(e) =>
+							handleScrollToSection({
+								e,
+								id: pathname === '/' ? 'contact' : 'cta',
+							})
+						}>
 						Contact
 					</Link>
 				</li>

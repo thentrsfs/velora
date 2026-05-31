@@ -88,7 +88,7 @@ const Hero = () => {
 
 							<div className='mt-10 flex gap-4'>
 								<PrimaryBtn />
-								<SecondaryBtn href='/menu'>Explore Menu</SecondaryBtn>
+								<SecondaryBtn href='#menu'>Explore Menu</SecondaryBtn>
 							</div>
 						</div>
 					</div>
