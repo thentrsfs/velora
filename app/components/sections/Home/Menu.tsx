@@ -55,13 +55,13 @@ const Menu = () => {
 			id='menu'
 			ref={menuRef}
 			className='relative lg:h-dvh h-full lg:py-32 py-20 flex items-center'>
-			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 max-md:gap-10 items-center'>
-				<div className='lg:max-w-lg max-w-xs'>
+			<div className='mx-auto w-full max-w-7xl px-6 grid lg:grid-cols-2 max-lg:gap-10 items-center'>
+				<div className='lg:max-w-lg md:max-w-md max-w-xs'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase menu-label opacity-0 translate-y-10'>
 						Signature Menu
 					</p>
 
-					<h2 className='font-display lg:text-6xl text-4xl leading-none text-text menu-title opacity-0 translate-y-10'>
+					<h2 className='font-display lg:text-6xl md:text-5xl text-4xl leading-none text-text menu-title opacity-0 translate-y-10'>
 						Crafted With
 						<br />
 						Precision & Warmth

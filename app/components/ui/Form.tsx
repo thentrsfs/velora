@@ -25,7 +25,7 @@ const Form = () => {
 
 	return (
 		<form
-			className='flex flex-col gap-8 max-w-lg mx-auto'
+			className='flex flex-col gap-8 lg:max-w-lg mx-auto'
 			onSubmit={handleSubmit}>
 			<div>
 				<label

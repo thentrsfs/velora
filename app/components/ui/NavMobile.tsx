@@ -55,12 +55,12 @@ const NavMobile = () => {
 		<div
 			className={`fixed inset-0 flex items-center justify-center bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100 z-50' : 'opacity-0'}`}>
 			<button
-				className='absolute top-6 right-6  text-sm lg:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'
+				className='absolute top-6 right-6 text-sm md:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'
 				onClick={() => setIsNavOpen(!isNavOpen)}>
 				<X />
 			</button>
 
-			<ul className='flex flex-col gap-10 text-xl text-text items-center'>
+			<ul className='flex flex-col gap-10 text-xl md:text-2xl text-text items-center'>
 				<li>
 					<Link
 						href='/'

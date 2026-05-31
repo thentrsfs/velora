@@ -50,7 +50,7 @@ const About = () => {
 		<section
 			id='about'
 			ref={aboutRef}
-			className='lg:h-dvh h-full grid lg:grid-cols-2 items-center px-6 lg:max-w-7xl mx-auto relative max-md:gap-10 lg:py-32 py-20'>
+			className='lg:h-dvh h-full grid lg:grid-cols-2 items-center px-6 md:max-w-7xl mx-auto relative max-lg:gap-10 lg:py-32 py-20'>
 			<div className='relative lg:h-160 h-90 overflow-hidden group rounded-4xl about-image opacity-0 translate-y-10'>
 				<Image
 					src='/images/about-image-1.jpg'
@@ -63,12 +63,12 @@ const About = () => {
 				<div className='absolute inset-0 bg-bg/20' />
 			</div>
 
-			<div className='lg:max-w-lg max-w-xs lg:mx-auto'>
+			<div className='lg:max-w-lg md:max-w-md max-w-xs lg:mx-auto'>
 				<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase about-label opacity-0 translate-y-10'>
 					ABOUT VELORA
 				</p>
 
-				<h2 className='font-display lg:text-6xl text-4xl leading-none text-text about-title opacity-0 translate-y-10'>
+				<h2 className='font-display lg:text-6xl md:text-5xl text-4xl leading-none text-text about-title opacity-0 translate-y-10'>
 					Designed For
 					<br />
 					Slow Moments.
@@ -79,7 +79,7 @@ const About = () => {
 						creating a space where coffee, conversation, and atmosphere come
 						together.
 					</p>
-					<span className='block mt-8 text-sm text-text-muted/70'>
+					<span className='block mt-8 text-sm md:text-base text-text-muted/70'>
 						Since 2026
 					</span>
 				</div>
