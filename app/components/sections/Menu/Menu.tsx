@@ -5,7 +5,21 @@ import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
 
-import { menuCategories } from '@/app/data/menu';
+import { MenuCategory } from '@/app/types/menu';
+import { client } from '@/sanity/lib/client';
+
+const menuCategories = await client.fetch<MenuCategory[]>(`
+  *[_type == "category"]{
+    _id,
+    title,
+    "items": *[_type == "menuItem" && references(^._id)]{
+      _id,
+      name,
+      description,
+      price
+    }
+  }
+`);
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Menu = () => {
@@ -53,7 +67,7 @@ const Menu = () => {
 				<div className='flex flex-col gap-18'>
 					{menuCategories.map((category) => (
 						<div
-							key={category.id}
+							key={category._id}
 							className='menu-category'>
 							<h2 className='pt-20 font-bold text-primary tracking-[0.3em] uppercase pb-2 menu-title opacity-0 translate-y-4'>
 								{category.title}
@@ -61,7 +75,7 @@ const Menu = () => {
 							<div className='mt-8 grid md:grid-cols-2 gap-10'>
 								{category.items.map((item) => (
 									<div
-										key={item.id}
+										key={item._id}
 										className='p-6 border-b border-primary/50 lg:max-w-lg group menu-item opacity-0 translate-y-4'>
 										<div className='flex justify-between items-center text-text mb-1'>
 											<h3 className='font-bold text-lg group-hover:text-primary transition-colors duration-300'>
