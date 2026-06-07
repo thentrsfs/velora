@@ -64,7 +64,7 @@ const MenuContent = ({ menuCategories }: Props) => {
 							<h2 className='pt-20 font-bold text-primary tracking-[0.3em] uppercase pb-2 menu-title opacity-0 translate-y-4'>
 								{category.title}
 							</h2>
-							<div className='mt-8 grid md:grid-cols-2 gap-10'>
+							<div className='mt-8 grid sm:grid-cols-2 gap-10'>
 								{category.items.map((item) => (
 									<div
 										key={item._id}
