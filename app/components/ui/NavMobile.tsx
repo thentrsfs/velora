@@ -110,7 +110,9 @@ const NavMobile = () => {
 					</Link>
 				</li>
 				<div>
-					<PrimaryButton />
+					<PrimaryButton
+						onClick={(e) => handleScrollToSection({ e, id: 'contact' })}
+					/>
 				</div>
 			</ul>
 			<div className='flex flex-col gap-8 items-center justify-between p-6'>
