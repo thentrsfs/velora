@@ -11,7 +11,6 @@ import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 const Nav = () => {
 	const pathname = usePathname();
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [isNavVisible, setIsNavVisible] = useState(true);
 
 	const setIsNavOpen = useUiStore((state) => state.setIsNavOpen);
 
@@ -34,24 +33,8 @@ const Nav = () => {
 	};
 
 	useEffect(() => {
-		let lastScrollY = window.scrollY;
-
 		const handleScroll = () => {
-			const currentScrollY = window.scrollY;
-
-			setIsScrolled(currentScrollY > 50);
-
-			if (window.innerWidth <= 1024) {
-				if (currentScrollY < 50) {
-					setIsNavVisible(true);
-				} else if (currentScrollY > lastScrollY) {
-					setIsNavVisible(false);
-				} else {
-					setIsNavVisible(true);
-				}
-			}
-
-			lastScrollY = currentScrollY;
+			setIsScrolled(window.scrollY > 50);
 		};
 
 		window.addEventListener('scroll', handleScroll, { passive: true });
@@ -63,7 +46,7 @@ const Nav = () => {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled && 'bg-bg/80 backdrop-blur-xl border-b border-white/5'} ${!isNavVisible && '-translate-y-full'}`}>
+			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled && 'bg-bg/80 backdrop-blur-xl border-b border-white/5'}`}>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
 				<h1
 					onClick={() => handleScrollToTop()}

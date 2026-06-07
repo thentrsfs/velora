@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import { X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
+import PrimaryButton from '@/app/components/ui/PrimaryBtn';
 import { useUiStore } from '@/app/store/ui';
 
 const NavMobile = () => {
@@ -53,14 +54,24 @@ const NavMobile = () => {
 
 	return (
 		<div
-			className={`fixed inset-0 flex items-center justify-center bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100 z-50' : 'opacity-0'}`}>
-			<button
-				className='absolute top-6 right-6 text-sm md:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'
-				onClick={() => setIsNavOpen(!isNavOpen)}>
-				<X />
-			</button>
-
-			<ul className='flex flex-col gap-10 text-xl md:text-2xl text-text items-center'>
+			className={`fixed w-[70%] right-0 top-0 h-screen flex flex-col justify-between bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100 z-50' : 'opacity-0'}`}>
+			<div className='pt-4 w-full flex justify-between items-center px-6'>
+				<div>
+					<h2 className='text-3xl font-clash-display tracking-widest uppercase'>
+						Velora
+					</h2>
+					<div className='w-15 h-0.5 bg-primary my-1' />
+					<p className='text-sm text-text/60 leading-relaxed'>
+						Crafted. Poured. Shared.
+					</p>
+				</div>
+				<button
+					className='absolute top-6 right-6 text-sm md:text-base hover:bg-primary hover:text-bg transition-all duration-300 cursor-pointer'
+					onClick={() => setIsNavOpen(!isNavOpen)}>
+					<X />
+				</button>
+			</div>
+			<ul className='flex flex-col gap-10 tracking-wide text-2xl text-text px-6'>
 				<li>
 					<Link
 						href='/'
@@ -98,7 +109,38 @@ const NavMobile = () => {
 						Contact
 					</Link>
 				</li>
+				<div>
+					<PrimaryButton />
+				</div>
 			</ul>
+			<div className='flex flex-col gap-8 items-center justify-between p-6'>
+				<div className='flex items-center gap-6 text-sm text-text-muted'>
+					<a
+						href='https://www.instagram.com/filip.webdev/'
+						target='_blank'
+						className='transition-colors duration-300 hover:text-primary'>
+						Instagram
+					</a>
+
+					<a
+						href='https://www.linkedin.com/in/filip-stojkov-315773a1/'
+						target='_blank'
+						className='transition-colors duration-300 hover:text-primary'>
+						LinkedIn
+					</a>
+
+					<a
+						href='https://www.filipstojkov.com'
+						target='_blank'
+						className='transition-colors duration-300 hover:text-primary'>
+						Portfolio
+					</a>
+				</div>
+
+				<p className='text-sm text-text-muted'>
+					&copy; {new Date().getFullYear()} Velora. All rights reserved.
+				</p>
+			</div>
 		</div>
 	);
 };
