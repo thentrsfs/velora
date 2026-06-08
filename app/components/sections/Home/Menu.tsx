@@ -102,7 +102,7 @@ transition-all duration-500 ease-out'>
 								</p>
 							</div>
 
-							<p className='text-sm tracking-wide text-primary'>€ 8.99</p>
+							<p className=' text-primary font-medium tracking-wide'>169 Kč</p>
 						</div>
 					</div>
 
@@ -123,7 +123,9 @@ transition-all duration-500 ease-out'>
 								<h3 className='lg:text-xl text-text font-clash-display tracking-wide'>
 									Velvet Latte
 								</h3>
-								<p className=' text-primary text-sm tracking-wide'>€ 6.99</p>
+								<p className=' text-primary font-medium tracking-wide'>
+									109 Kč
+								</p>
 							</div>
 							<p className='mt-2 text-sm text-text-muted'>
 								Smooth espresso with velvety milk foam.
@@ -147,7 +149,9 @@ transition-all duration-500 ease-out'>
 								<h3 className='lg:text-xl text-text font-clash-display tracking-wide'>
 									Espresso Noir
 								</h3>
-								<p className=' text-primary text-sm tracking-wide'>€ 4.99</p>
+								<p className=' text-primary font-medium tracking-wide'>
+									129 Kč
+								</p>
 							</div>
 							<p className='mt-2 text-sm text-text-muted'>
 								Bold espresso with a smooth finish.
