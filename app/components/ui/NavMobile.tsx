@@ -54,7 +54,7 @@ const NavMobile = () => {
 
 	return (
 		<div
-			className={`fixed w-[70%] right-0 top-0 h-screen flex flex-col justify-between bg-bg backdrop-blur-sm lg:hidden transition-opacity ${isNavOpen ? 'opacity-100 z-50' : 'opacity-0'}`}>
+			className={`fixed w-[70%] right-0 top-0 h-screen flex flex-col justify-between bg-bg backdrop-blur-sm lg:hidden transition-transform duration-300 z-50 ${isNavOpen ? 'translate-x-0' : 'translate-x-full'}`}>
 			<div className='pt-4 w-full flex justify-between items-center px-6'>
 				<div>
 					<h2 className='text-3xl font-clash-display tracking-widest uppercase'>

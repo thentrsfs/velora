@@ -46,7 +46,7 @@ const Nav = () => {
 
 	return (
 		<header
-			className={`fixed top-0 left-0 w-full z-50 bg-transparent transition-transform duration-300 ${isScrolled && 'bg-bg/80 backdrop-blur-xl border-b border-white/5'}`}>
+			className={`fixed top-0 left-0 w-full z-40 bg-transparent transition-transform duration-300 ${isScrolled && 'bg-bg/80 backdrop-blur-xl border-b border-white/5'}`}>
 			<nav className='flex items-center justify-between mx-auto max-w-7xl py-4 px-6 '>
 				<h1
 					onClick={() => handleScrollToTop()}
