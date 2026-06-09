@@ -57,12 +57,12 @@ const Gallery = () => {
 	}, []);
 	return (
 		<section
-			className='lg:dvh h-full py-20 lg:py-32 overflow-hidden'
-			id='galerie'>
-			<div className='max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center'>
+			className='lg:min-h-dvh h-full py-20 lg:py-32 overflow-hidden max-w-7xl mx-auto px-6 flex flex-col justify-center'
+			id='gallery'>
+			<div className=' grid grid-cols-1 lg:grid-cols-12 gap-12 items-center'>
 				<div className='lg:col-span-5 lg:max-w-lg md:max-w-md max-w-xs w-full select-none'>
 					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase about-label'>
-						GALERIE VELORA
+						GALLERY VELORA
 					</p>
 					<h2 className='font-display lg:text-6xl md:text-5xl text-4xl leading-none text-text about-title'>
 						Captured

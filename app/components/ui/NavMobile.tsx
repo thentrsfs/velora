@@ -88,6 +88,17 @@ const NavMobile = () => {
 				</li>
 				<li>
 					<Link
+						href='/#gallery'
+						onClick={
+							pathname === '/menu'
+								? closeNav
+								: (e) => handleScrollToSection({ e, id: 'gallery' })
+						}>
+						Gallery
+					</Link>
+				</li>
+				<li>
+					<Link
 						href='/#about'
 						onClick={
 							pathname === '/menu'

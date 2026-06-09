@@ -18,8 +18,8 @@ export default function Home() {
 			<main>
 				<Hero />
 				<Menu />
-				<About />
 				<Gallery />
+				<About />
 				<Contact />
 			</main>
 		</>
