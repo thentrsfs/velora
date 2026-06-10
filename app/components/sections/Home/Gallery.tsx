@@ -1,6 +1,9 @@
 'use client';
 
 import { useRef, useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -43,11 +46,52 @@ const galleryImages: GalleryItem[] = [
 	},
 ];
 
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 const Gallery = () => {
+	const galleryRef = useRef<HTMLDivElement>(null);
 	const carouselRef = useRef<HTMLDivElement>(null);
 	const [width, setWidth] = useState(0);
 
-	// Računamo tačnu širinu zaustavljanja da nam galerija ne pobegne u beskrajno sivilo
+	useGSAP(
+		() => {
+			const tl = gsap.timeline({
+				scrollTrigger: { trigger: galleryRef.current, start: 'top center' },
+			});
+
+			tl.to(
+				'.gallery-label',
+				{
+					opacity: 1,
+					y: 0,
+					duration: 0.8,
+					ease: 'power3.out',
+				},
+				'-=0.6',
+			)
+				.to(
+					'.gallery-title',
+					{ opacity: 1, y: 0, duration: 1.2, ease: 'power4.out' },
+					'-=0.4',
+				)
+				.to(
+					'.gallery-text',
+					{ opacity: 1, y: 0, duration: 1, ease: 'power4.out' },
+					'-=0.8',
+				)
+				.to(
+					'.gallery-carousel',
+					{
+						opacity: 1,
+						y: 0,
+						duration: 1,
+						ease: 'power3.out',
+					},
+					'-=0.8',
+				);
+		},
+		{ scope: galleryRef },
+	);
+
 	useEffect(() => {
 		if (carouselRef.current) {
 			setWidth(
@@ -58,18 +102,19 @@ const Gallery = () => {
 	return (
 		<section
 			className='lg:min-h-dvh h-full py-20 lg:py-32 overflow-hidden max-w-7xl mx-auto px-6 flex flex-col justify-center'
+			ref={galleryRef}
 			id='gallery'>
 			<div className=' grid grid-cols-1 lg:grid-cols-12 gap-12 items-center'>
 				<div className='lg:col-span-5 lg:max-w-lg md:max-w-md max-w-xs w-full select-none'>
-					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase about-label'>
+					<p className='mb-4 text-sm tracking-[0.3em] text-primary uppercase gallery-label opacity-0 translate-y-10'>
 						GALLERY VELORA
 					</p>
-					<h2 className='font-display lg:text-6xl md:text-5xl text-4xl leading-none text-text about-title'>
+					<h2 className='font-display lg:text-6xl md:text-5xl text-4xl leading-none text-text gallery-title opacity-0 translate-y-10'>
 						Captured
 						<br />
 						Atmosphere.
 					</h2>
-					<div className='about-text'>
+					<div className='gallery-text opacity-0 translate-y-10'>
 						<p className='mt-8 max-w-sm text-lg text-text-muted'>
 							Enjoy a visual journey through our cafe&apos;s ambiance, crafted
 							beverages, and delectable treats. Each photo captures the essence
@@ -85,7 +130,7 @@ const Gallery = () => {
 				<div className='lg:col-span-7 w-full'>
 					<div
 						ref={carouselRef}
-						className='cursor-grab active:cursor-grabbing overflow-hidden w-full pb-4'>
+						className='cursor-grab active:cursor-grabbing overflow-hidden w-full pb-4 gallery-carousel opacity-0 translate-y-10'>
 						<motion.div
 							drag='x'
 							dragConstraints={{ right: 0, left: -width }}
